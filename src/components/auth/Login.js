@@ -22,8 +22,8 @@ const Login = ({history}) => {
     }, [mensaje, autenticado, history]);
     // State para iniciar sesión
     const [usuario, guardarUsuario] = useState({
-        email: 'andres@correo.com',
-        password: '123456'
+        email: '',
+        password: ''
     });
 
     // extraer de usuario
