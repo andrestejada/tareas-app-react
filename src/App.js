@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Switch ,Redirect} from 'react-router-dom';
+import { HashRouter as Router, Switch ,Redirect} from 'react-router-dom';
 import Login from './components/auth/Login';
 import NuevaCuenta from './components/auth/NuevaCuenta';
 import Proyectos from './components/proyectos/Proyectos';
@@ -15,7 +15,7 @@ import { store } from './store/store';
 function App() {
   return (
     <Provider store={store} >
-      <Router basename={process.env.PUBLIC_URL} >
+      <Router basename='/' >
         <Switch>
             <RutaPublica exact path="/" component={Login} />
             <RutaPublica exact path="/nueva-cuenta" component={NuevaCuenta} />
