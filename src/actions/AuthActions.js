@@ -48,7 +48,6 @@ export const usuarioAutenticado=()=>{
 
         try {
             const resp = await clienteAxios.get('/api/auth');
-            console.log(resp)
             dispatch( obtenerUsuario(resp.data.usuario) ) 
             
         } catch (error) {

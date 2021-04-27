@@ -11,7 +11,6 @@ import {TAREAS_PROYECTO,
 export const obtenerTareas=(proyecto)=>{
     return async(dispatch)=>{
         const resp = await clienteAxios.get('/api/tareas',{params:{proyecto}})
-        console.log(resp)
         dispatch(obtenerTareasAction(resp.data.tareas) )
     }
 }
@@ -25,7 +24,6 @@ export const agregarTarea=(tarea)=>{
     return async (dispatch)=>{
         try {
             const resp = await clienteAxios.post('/api/tareas',tarea)
-            console.log(resp.data.tarea)
             dispatch( agregarTareaAction(resp.data.tarea) )
         } catch (error) {
             
@@ -58,7 +56,6 @@ export const ActualizarTarea=(tarea)=>{
     return  async(dispatch)=>{
         try {
             const resp = await clienteAxios.put(`/api/tareas/${tarea._id}`,tarea)
-            console.log(resp)
             dispatch(ActualizarTareaAction(resp.data.tarea))
         } catch (error) {
             console.log(error.response)

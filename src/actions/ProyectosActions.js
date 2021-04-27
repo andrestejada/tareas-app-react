@@ -40,7 +40,6 @@ export const agregarProyecto=(proyecto)=>{
     return async(dispatch)=>{
        try {
         const resp = await clienteAxios.post('/api/proyectos',proyecto)
-        console.log(resp.data)
         dispatch( agregarProyectoAction(resp.data) )
        } catch (error) {
            console.log(error.response)
@@ -74,7 +73,6 @@ export const EliminarProyecto=(id)=>{
             await clienteAxios.delete(`/api/proyectos/${id}`)
             dispatch(EliminarProyectoAction(id))
         } catch (error) {
-            console.log(error.response)
             const alerta ={
                 msg: error.response.data,
                 categoria:'alerta-error'
