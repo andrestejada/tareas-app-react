@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.a40edaea.chunk.css",
-    "main.js": "/static/js/main.62758ad8.chunk.js",
-    "main.js.map": "/static/js/main.62758ad8.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ab007dcd.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ab007dcd.js.map",
-    "static/js/2.59bd6bb4.chunk.js": "/static/js/2.59bd6bb4.chunk.js",
-    "static/js/2.59bd6bb4.chunk.js.map": "/static/js/2.59bd6bb4.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.a40edaea.chunk.css.map": "/static/css/main.a40edaea.chunk.css.map",
-    "static/js/2.59bd6bb4.chunk.js.LICENSE.txt": "/static/js/2.59bd6bb4.chunk.js.LICENSE.txt"
+    "main.css": "/tareas-app-react/static/css/main.a40edaea.chunk.css",
+    "main.js": "/tareas-app-react/static/js/main.04e63d0e.chunk.js",
+    "main.js.map": "/tareas-app-react/static/js/main.04e63d0e.chunk.js.map",
+    "runtime-main.js": "/tareas-app-react/static/js/runtime-main.0d69c693.js",
+    "runtime-main.js.map": "/tareas-app-react/static/js/runtime-main.0d69c693.js.map",
+    "static/js/2.59bd6bb4.chunk.js": "/tareas-app-react/static/js/2.59bd6bb4.chunk.js",
+    "static/js/2.59bd6bb4.chunk.js.map": "/tareas-app-react/static/js/2.59bd6bb4.chunk.js.map",
+    "index.html": "/tareas-app-react/index.html",
+    "static/css/main.a40edaea.chunk.css.map": "/tareas-app-react/static/css/main.a40edaea.chunk.css.map",
+    "static/js/2.59bd6bb4.chunk.js.LICENSE.txt": "/tareas-app-react/static/js/2.59bd6bb4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ab007dcd.js",
+    "static/js/runtime-main.0d69c693.js",
     "static/js/2.59bd6bb4.chunk.js",
     "static/css/main.a40edaea.chunk.css",
-    "static/js/main.62758ad8.chunk.js"
+    "static/js/main.04e63d0e.chunk.js"
   ]
 }
