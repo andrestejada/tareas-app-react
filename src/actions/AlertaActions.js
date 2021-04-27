@@ -1,17 +1,21 @@
 import { MOSTRAR_ALERTA , OCULTAR_ALERTA} from '../types/index'
 
 export const mostrarAlerta=(msg,categoria)=>{
-    return (dispatch)=>{
-        dispatch({type:MOSTRAR_ALERTA,
-                payload:{
-                    msg,
-                    categoria
-                }});
+    return async (dispatch)=>{
+        dispatch(mostartAlertaAction(msg,categoria));
 
         setTimeout(()=>{
-            dispatch({
-                type:OCULTAR_ALERTA
-            })
-        },2000)
-        }
+            dispatch(ocultarAlertaAction())
+        },2000)}
 }
+
+export const mostartAlertaAction=(msg,categoria)=>({
+    type:MOSTRAR_ALERTA,
+    payload:{
+        msg,
+        categoria
+    }})
+
+export const ocultarAlertaAction=()=>({
+    type:OCULTAR_ALERTA
+})

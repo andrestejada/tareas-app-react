@@ -37,15 +37,16 @@ const Login = ({history}) => {
         })
     }
 
-    const onSubmit=async(e)=>{
+    const onSubmit=(e)=>{
         e.preventDefault()
         // Validar que no haya campos vacios
         if(email.trim() === '' || password.trim() === '') {
             dispatch(mostrarAlerta('Todos los campos son obligatorios', 'alerta-error'));
+            return;
         }
-
+        console.log('paso la validacion')
         //iniciar sesion
-        await dispatch( iniciarSesion({email,password}) )
+        dispatch( iniciarSesion({email,password}) )
         dispatch( usuarioAutenticado() )
     }
     return (
