@@ -10,7 +10,9 @@ const RutaPublica = ({component:Component ,...props }) => {
     return (
       <Route {...props} render={ props=> ( autenticado )
         ? (<Redirect to='/proyectos' />) 
-        : (<Component {...props} />) } />
+        : (<Component {...props} />) } 
+        
+        />
     )
 }
 

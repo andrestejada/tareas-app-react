@@ -8,11 +8,13 @@ import { usuarioAutenticado } from '../../actions/AuthActions';
 // import FormTarea from '../tareas/FormTarea';
 // import ListadoTareas from '../tareas/ListadoTareas';
 
+
 const Proyectos = () => {
     const dispatch = useDispatch()
 
     
     useEffect(() => {
+
         dispatch(usuarioAutenticado());
         // eslint-disable-next-line
     }, [])

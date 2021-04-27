@@ -6,17 +6,16 @@ import NuevaCuenta from './components/auth/NuevaCuenta';
 import Proyectos from './components/proyectos/Proyectos';
 import RutaPrivada from './components/routes/RutaPrivada';
 import RutaPublica from './components/routes/RutaPublica';
-import tokenAuth from './config/token';
 import { store } from './store/store';
 
-const token = localStorage.getItem('token')
-if(token){
-  tokenAuth(token)
-}
+// const token = localStorage.getItem('token')
+// if(token){
+//   tokenAuth(token)
+// }
 function App() {
   return (
     <Provider store={store} >
-      <Router>
+      <Router basename={process.env.PUBLIC_URL} >
         <Switch>
             <RutaPublica exact path="/" component={Login} />
             <RutaPublica exact path="/nueva-cuenta" component={NuevaCuenta} />

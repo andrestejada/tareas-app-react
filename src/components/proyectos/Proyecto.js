@@ -1,6 +1,6 @@
 import React  from 'react';
 import { useDispatch } from 'react-redux';
-import { ProyectoActual } from '../../actions/ProyectosActions';
+import {  ProyectoActual } from '../../actions/ProyectosActions';
 import { obtenerTareas } from '../../actions/TareasActions';
 
 
@@ -8,9 +8,8 @@ const Proyecto = ({proyecto}) => {
     const dispatch = useDispatch()
     
     const seleccionarProyecto = id =>{
-        // proyectoActual(id)//fijar proyecto actual
-        // obtenerTareas(id)
-        dispatch( ProyectoActual(id) );
+      
+        dispatch( ProyectoActual(id) );       
         dispatch( obtenerTareas(id) );
 
     }

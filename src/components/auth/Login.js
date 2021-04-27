@@ -2,7 +2,7 @@ import React, {  useEffect, useState } from 'react'
 import { useDispatch ,useSelector} from 'react-redux';
 import { Link } from 'react-router-dom';
 import { mostrarAlerta } from '../../actions/AlertaActions';
-import { iniciarSesion, usuarioAutenticado } from '../../actions/AuthActions';
+import { iniciarSesion } from '../../actions/AuthActions';
 
 const Login = ({history}) => {
     const dispatch = useDispatch()
@@ -22,8 +22,8 @@ const Login = ({history}) => {
     }, [mensaje, autenticado, history]);
     // State para iniciar sesión
     const [usuario, guardarUsuario] = useState({
-        email: '',
-        password: ''
+        email: 'andres@correo.com',
+        password: '123456'
     });
 
     // extraer de usuario
@@ -44,10 +44,9 @@ const Login = ({history}) => {
             dispatch(mostrarAlerta('Todos los campos son obligatorios', 'alerta-error'));
             return;
         }
-        console.log('paso la validacion')
         //iniciar sesion
         dispatch( iniciarSesion({email,password}) )
-        dispatch( usuarioAutenticado() )
+        //dispatch( usuarioAutenticado() )
     }
     return (
         <div className="form-usuario">

@@ -19,8 +19,9 @@ export const ObtenerProyectos=()=>{
             const resp = await clienteAxios.get('/api/proyectos')
             dispatch( ObtenerProyectosAction(resp.data.proyectos) )
         } catch (error) {
+            console.log(error.response)
             const alerta ={
-                msg: error.response.data,
+                msg: error.response.data.msg,
                 categoria:'alerta-error'
             };
             dispatch( proyectoError(alerta) )

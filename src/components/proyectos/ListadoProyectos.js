@@ -8,13 +8,17 @@ const ListadoProyectos = () => {
     const dispatch = useDispatch()
     const {proyectos, mensaje} = useSelector(state => state.proyectos)
     const {alerta} = useSelector(state => state.alerta)
+    const {autenticado} = useSelector(state => state.auth)
 
     useEffect(() => {
         // si hay un error
         if(mensaje) {
            dispatch( mostrarAlerta(mensaje.msg, mensaje.categoria));
         } 
-       dispatch( ObtenerProyectos() )
+       
+       if(autenticado){
+        dispatch( ObtenerProyectos() );
+       }
        // eslint-disable-next-line
     }, [ObtenerProyectos,mensaje])
     
